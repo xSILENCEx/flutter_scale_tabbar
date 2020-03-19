@@ -64,15 +64,19 @@ class _TabStyle extends AnimatedWidget {
         : Color.lerp(unselectedColor, selectedColor, animation.value);
 
     ///根据前后字体大小计算缩放倍率
-    final double magnification =
-        2 - unselectedLabelStyle.fontSize / labelStyle.fontSize;
-    final double scale = selected
-        ? lerpDouble(magnification, 1, animation.value)
-        : lerpDouble(1, magnification, animation.value);
+    final double _magnification =
+        labelStyle.fontSize / unselectedLabelStyle.fontSize;
+    final double _scale = selected
+        ? lerpDouble(_magnification, 1, animation.value)
+        : lerpDouble(1, _magnification, animation.value);
 
     return DefaultTextStyle(
       style: textStyle.copyWith(
-          color: color, fontSize: unselectedLabelStyle.fontSize),
+        color: color,
+
+        ///钉死文字大小
+        fontSize: unselectedLabelStyle.fontSize,
+      ),
       child: IconTheme.merge(
         data: IconThemeData(
           size: 24.0,
@@ -81,7 +85,7 @@ class _TabStyle extends AnimatedWidget {
 
         ///添加一个缩放外壳
         child: Transform.scale(
-          scale: scale,
+          scale: _scale,
           child: child,
         ),
       ),
