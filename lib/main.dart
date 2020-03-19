@@ -58,8 +58,8 @@ class MyHomePage extends StatelessWidget {
                 },
 
                 labelColor: Colors.black,
-                labelStyle: const TextStyle(fontSize: 40),
-                unselectedLabelStyle: const TextStyle(fontSize: 20),
+                labelStyle: const TextStyle(fontSize: 30),
+                unselectedLabelStyle: const TextStyle(fontSize: 16),
 
                 //波纹属性
                 splashColor: Colors.blue,
@@ -77,8 +77,8 @@ class MyHomePage extends StatelessWidget {
             TabBar(
               tabs: _tabs,
               labelColor: Colors.black,
-              labelStyle: const TextStyle(fontSize: 40),
-              unselectedLabelStyle: const TextStyle(fontSize: 20),
+              labelStyle: const TextStyle(fontSize: 30),
+                unselectedLabelStyle: const TextStyle(fontSize: 16),
             ),
 
             Expanded(child: TabBarView(children: _tabViews)),

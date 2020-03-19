@@ -10,6 +10,8 @@ import 'package:flutter/gestures.dart' show DragStartBehavior;
 
 const double _kTabHeight = 46.0;
 const double _kTextAndIconTabHeight = 72.0;
+const double _kDefaultLableFontSize = 20;
+const double _kDefaultUnselectLableFontSize = 14;
 
 class _TabStyle extends AnimatedWidget {
   const _TabStyle({
@@ -499,10 +501,11 @@ class ScaleTabBar extends StatefulWidget implements PreferredSizeWidget {
     this.indicator,
     this.indicatorSize,
     this.labelColor,
-    this.labelStyle,
+    this.labelStyle = const TextStyle(fontSize: _kDefaultLableFontSize),
     this.labelPadding,
     this.unselectedLabelColor,
-    this.unselectedLabelStyle,
+    this.unselectedLabelStyle =
+        const TextStyle(fontSize: _kDefaultUnselectLableFontSize),
     this.splashColor = Colors.transparent,
     this.highlightColor = Colors.transparent,
     this.borderRadius = const BorderRadius.all(Radius.circular(0)),
