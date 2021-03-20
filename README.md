@@ -1,7 +1,7 @@
 # Flutter Scale TabBar
 
 > ## 注意
-* 以迁移至空安全，非空安全请使用
+* 已经迁移至空安全，旧版本(非空安全)请使用
 `scale_tabbar.dart.nonnullsafety`,
 需要手动去除`.nonnullsafety`
 
