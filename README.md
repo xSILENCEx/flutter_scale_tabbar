@@ -1,5 +1,10 @@
 # Flutter Scale TabBar
 
+> ## 注意
+* 以迁移至空安全，非空安全请使用
+`scale_tabbar.dart.nonnullsafety`,
+需要手动去除`.nonnullsafety`
+
 > ## 特性
 
 * 缓解tab切换文字抖动问题
